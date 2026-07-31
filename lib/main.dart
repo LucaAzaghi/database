@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SupbaseClientManager.init();
+  await SupbaseClientManager.client.auth.signUp(
+    email: 'carlo.verdi@gmail.com',
+    password: 'provadatabase',
+  );
   runApp(const MyApp());
 }
 
