@@ -22,6 +22,10 @@ class RegisterView extends StatelessWidget {
               child: Column(
                 children: [
                   TextField(
+                    controller: emailController,
+                    decoration: InputDecoration(labelText: 'Email'),
+                  ),
+                  TextField(
                     controller: passwordController,
                     decoration: InputDecoration(labelText: 'Password'),
                   ),

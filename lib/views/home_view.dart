@@ -10,15 +10,28 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     final vm = Provider.of<AuthViewModel>(context);
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text('SupabaseApp')),
+      appBar: AppBar(
+        title: Center(child: Text('SupabaseApp')),
         actions: [
-          IconButton(onPressed: () async{
-            await vm.logout();
-            if (context.mounted) {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => LoginView()));
-            }
-          }, icon: const Icon(Icons.logout))
+          IconButton(
+            onPressed: () async {
+              await vm.logout();
+              if (context.mounted) {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (_) => LoginView()),
+                );
+              }
+            },
+            icon: const Icon(Icons.logout),
+          ),
         ],
+      ),
+      body: Center(
+        child: Text(
+          'Benvenuto nella Homeview!',
+          style: TextStyle(fontSize: 20),
+        ),
       ),
     );
   }

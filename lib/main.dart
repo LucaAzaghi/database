@@ -8,10 +8,6 @@ import 'package:provider/provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SupbaseClientManager.init();
-  await SupbaseClientManager.client.auth.signUp(
-    email: 'carlo.verdi@gmail.com',
-    password: 'provadatabase',
-  );
   runApp(const MyApp());
 }
 
@@ -27,6 +23,7 @@ class MyApp extends StatelessWidget {
         builder: (context, auth, _) {
           return MaterialApp(
             title: 'Flutter Demo',
+            debugShowCheckedModeBanner: false,
             theme: ThemeData(
               colorScheme: .fromSeed(
                 seedColor: Colors.lightGreen,
