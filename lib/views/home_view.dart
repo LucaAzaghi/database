@@ -1,5 +1,6 @@
 import 'package:database/viewmodel/auth_view_model.dart';
 import 'package:database/views/auth/login_view.dart';
+import 'package:database/views/widgets/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -33,6 +34,7 @@ class HomeView extends StatelessWidget {
           style: TextStyle(fontSize: 20),
         ),
       ),
+      bottomNavigationBar: BottomNavBar(currentIndex: 0),
     );
   }
 }
