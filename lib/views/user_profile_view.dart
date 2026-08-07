@@ -73,7 +73,7 @@ class _UserProfileViewState extends State<UserProfileView> {
                       child: GestureDetector(
                         onTap: _pickImageFromGallery,
                         child: CircleAvatar(
-                          radius: 50,
+                          radius: 50, 
                           backgroundImage: _selectedFile != null
                               ? FileImage(_selectedFile!)
                               : profile?.avatarUrl != null
